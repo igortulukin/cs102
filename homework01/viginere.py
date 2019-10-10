@@ -1,7 +1,9 @@
 def encrypt_vigenere(plaintext: str, keyword: str) -> str:
     cipher_text = ''
+    i = 0
     while len(keyword) < len(plaintext):
-        keyword += keyword
+        keyword += keyword[i]
+        i += 1
     for i in range(0, len(plaintext)):
         if not (65 <= ord(str(plaintext[i])) <= 90 or 97 <= ord(str(plaintext[i])) <= 122):
             cipher_text += plaintext[i]
@@ -36,3 +38,7 @@ def decrypt_vigenere(cipher_text: str, keyword: str) -> str:
                     decrypt += 26
             plaintext += chr(decrypt)
     return plaintext
+
+a = input()
+b = input()
+print(encrypt_vigenere(a, b))
