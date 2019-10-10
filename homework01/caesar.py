@@ -22,9 +22,3 @@ def decrypt_caesar(cipher_text: str) -> str:
                 decrypt += 26
             plaintext += chr(decrypt - 3)
     return plaintext
-
-
-a = input('Enter your word: ')
-print(encrypt_caesar(a))
-decrypt = encrypt_caesar(a)
-print(decrypt_caesar(decrypt))
