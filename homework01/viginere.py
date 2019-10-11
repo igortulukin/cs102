@@ -38,4 +38,3 @@ def decrypt_vigenere(cipher_text: str, keyword: str) -> str:
                     decrypt += 26
             plaintext += chr(decrypt)
     return plaintext
-
