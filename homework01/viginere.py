@@ -39,6 +39,3 @@ def decrypt_vigenere(cipher_text: str, keyword: str) -> str:
             plaintext += chr(decrypt)
     return plaintext
 
-a = input()
-b = input()
-print(encrypt_vigenere(a, b))
