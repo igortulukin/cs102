@@ -2,11 +2,14 @@ import random
 
 
 def is_prime(n: int) -> bool:
-    for i in range(2, n+1):
-        if n % i == 0:
-            return False
-        else:
-            return True
+    if n == 2 :
+        return True
+    else :
+        for i in range(2, n):
+            if n % i == 0 :
+                return False
+            else:
+                return True
 
 
 def gcd(a: int, b: int) -> int:
