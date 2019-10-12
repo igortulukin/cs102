@@ -1,4 +1,14 @@
 def encrypt_caesar(plaintext: str) -> str:
+     """
+    >>> encrypt_caesar("PYTHON")
+    'SBWKRQ'
+    >>> encrypt_caesar("python")
+    'sbwkrq'
+    >>> encrypt_caesar("Python3.6")
+    'Sbwkrq3.6'
+    >>> encrypt_caesar("")
+    ''
+    """
     cipher_text = ''
     for i in plaintext:
         if not (65 <= ord(i) <= 90 or 97 <= ord(i) <= 122):
@@ -12,6 +22,16 @@ def encrypt_caesar(plaintext: str) -> str:
 
 
 def decrypt_caesar(cipher_text: str) -> str:
+    """
+    >>> decrypt_caesar("SBWKRQ")
+    'PYTHON'
+    >>> decrypt_caesar("sbwkrq")
+    'python'
+    >>> decrypt_caesar("Sbwkrq3.6")
+    'Python3.6'
+    >>> decrypt_caesar("")
+    ''
+    """
     plaintext = ''
     for i in cipher_text:
         if not (65 <= ord(i) <= 90 or 97 <= ord(i) <= 122):
