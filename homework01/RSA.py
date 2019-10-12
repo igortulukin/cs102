@@ -12,11 +12,11 @@ def is_prime(n: int) -> bool:
     """
     if n == 0 or n == 1:
         return False
-        else:
-            for i in range(2, n):
-                if n % i == 0 :
-                    return False
-            return True
+    else:
+        for i in range(2, n):
+            if n % i == 0 :
+                return False
+        return True
 
 
 def gcd(a: int, b: int) -> int:
