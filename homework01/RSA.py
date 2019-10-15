@@ -12,11 +12,10 @@ def is_prime(n: int) -> bool:
     """
     if n == 0 or n == 1:
         return False
-    else:
-        for i in range(2, n):
-            if n % i == 0 :
-                return False
-        return True
+    for i in range(2, n):
+        if n % i == 0 :
+            return False
+    return True
 
 
 def gcd(a: int, b: int) -> int:
@@ -26,7 +25,7 @@ def gcd(a: int, b: int) -> int:
     >>> gcd(3, 7)
     1
     """
-    while (a % b != 0):
+    while a % b != 0 :
         c = a % b
         a = b
         b = c
@@ -70,6 +69,8 @@ def generate_keypair(p: int, q: int) -> ((int, int), (int, int)):
 
     d = multiplicative_inverse(e, phi)
     return (e, n), (d, n)
+
+
 def encrypt(pk, plaintext):
     # Unpack the key into it's components
     key, n = pk
