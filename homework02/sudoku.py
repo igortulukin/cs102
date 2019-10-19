@@ -28,7 +28,15 @@ def group(values: List[str], n: int) -> List[List[str]]:
     >>> group([1,2,3,4,5,6,7,8,9], 3)
     [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
     """
-    return [values[i:i+n] for i in range(0, len(values), n)]
+    group = []
+    row = []
+    i = 0
+    for i in range(0,len(values)):
+        row.append(values[i])
+        if (i+1) % n == 0:
+            group.append(row)
+            row = []
+    return group 
 
 
 def get_row(grid: List[List[str]], pos: Tuple[int, int]) -> List[str]:
