@@ -39,7 +39,7 @@ def extract_news(parser):
 
 def get_news(url, n_pages=1):
     news = []
-    for oops in range(n_pages):
+    for i in range(n_pages):
         print(f"Collecting data from page: {url}")
         response = requests.get(url)
         soup = BeautifulSoup(response.text, "html.parser")
