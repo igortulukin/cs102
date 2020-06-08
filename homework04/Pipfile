@@ -8,6 +8,9 @@ verify_ssl = true
 [packages]
 pytelegrambotapi = "*"
 flask = "*"
+beautifulsoup4 = "*"
+requests = "*"
+html5lib = "*"
 
 [requires]
 python_version = "3.7"
